@@ -21,3 +21,18 @@ const greekGods = [
   "Poseidon",
   "Zeus",
 ];
+//synchronous
+greekGods.forEach((god, index) => {
+  console.log(index + god);
+});
+
+//asynchronous
+greekGods.forEach((god, index) => {
+  if (index === 2) {
+    setTimeout(() => {
+      console.log(index + "   " + god);
+    }, 2000);
+  } else {
+    console.log(index + god);
+  }
+});
